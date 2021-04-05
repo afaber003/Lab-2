@@ -23,6 +23,12 @@ struct IntNode {
 class IntList {
 
     public:
+        //default constructor
+        Intlist(){
+            IntNode* head = nullptr;
+            IntNode* tail - nullptr;
+            size = 0;
+        }
 
 
     private:
