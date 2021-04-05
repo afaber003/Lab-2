@@ -2,22 +2,10 @@
 #define INTLIST_H
 
 struct IntNode {
-    int data = 0;
-    IntNode* next = nullptr;
-    IntNode* prev = nullptr;
-
-
-    IntNode(){
-        next = nullptr;
-        prev = nullptr;
-        data = 0;
-    }
-    IntNode(int newdata){
-        next = nullptr;
-        prev = nullptr;
-        data = newdata;
-    }
-
+    int data;
+    IntNode *prev;
+    IntNode *next;
+    IntNode(int data) : data(data), prev(0), next(0) {}
 };
 
 class IntList {
