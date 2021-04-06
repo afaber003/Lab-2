@@ -27,6 +27,12 @@ class IntList {
         
         ~IntList();
         void push_front(int);
+        void pop_front();
+        void push_back(int value);
+        void pop_back();
+        bool empty() const;
+        friend ostream & operator<<(ostream &out, const IntList &rhs);
+        void printReverse() const;
 
 
     private:
