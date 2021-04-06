@@ -21,6 +21,15 @@ void IntList::push_front(int value){
     newone->next->prev = newone;
 }
 
+void IntList::pop_front()
+{
+  IntNode* oldHead = dummyHead->next;
+  dummyHead->next = oldHead->next;
+  oldHead->next->prev = dummyHead;
+  delete oldHead;
+
+}
+
 void IntList::push_back(int value)
 {
   IntNode* newone = new IntNode(value);
