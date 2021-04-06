@@ -20,3 +20,19 @@ void IntList::push_front(int value){
     newone->prev = dummyHead;
     newone->next->prev = newone;
 }
+
+ostream & operator<<(ostream &out, const IntList &rhs)
+{
+  if (rhs.head != nullptr)
+  {
+    IntNode *tempNode = rhs.head;
+    while (tempNode != rhs.tail)
+    {
+      out << tempNode->data << " ";
+      tempNode = tempNode->next;
+    }
+    out << rhs.tail->data;
+  }
+
+  return out;
+}
