@@ -21,7 +21,7 @@ void IntList::push_front(int value){
     newone->next->prev = newone;
 }
 
-void IntList::pop_front()
+void IntList::pop_front() //please check if I deleted properly
 {
   IntNode* oldHead = dummyHead->next;
   dummyHead->next = oldHead->next;
@@ -38,6 +38,14 @@ void IntList::push_back(int value)
   newone->prev->next = newone;
   newone->next = dummyTail;
 
+}
+
+void IntList::pop_back() //please check if I deleted properly
+{
+  IntNode* oldTail = dummyTail->prev;
+  dummyTail->prev = oldTail->prev;
+  oldTail->prev->next = dummyTail;
+  delete oldTail;
 }
 
 ostream & operator<<(ostream &out, const IntList &rhs)
@@ -62,6 +70,7 @@ ostream & operator<<(ostream &out, const IntList &rhs)
     }
     //out << rhs.dummyTail->prev->data;
   }
+
 
   return out;
 }

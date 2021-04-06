@@ -11,6 +11,7 @@ int main() {
 
   //cout << "hello";
   IntList testList;
+  cout << "Push Front tests:" << endl;
   cout << "Push front 5" << endl;
   testList.push_front(5);
   cout << "testList: " << testList << endl;
@@ -29,7 +30,9 @@ int main() {
   cout << "Push front 1" << endl;
   testList.push_front(1);
   cout << "testList: " << testList << endl;
+  cout << endl;
 
+  cout << "Pop Front tests:" << endl;
   cout << "Pop front 1" << endl;
   testList.pop_front();
   cout << "testList: " << testList << endl;
@@ -42,7 +45,9 @@ int main() {
   cout << "Pop front 7" << endl;
   testList.pop_front();
   cout << "testList: " << testList << endl;
+  cout << endl;
 
+  cout << "Push Back tests:" << endl;
   cout << "Push back 20" << endl;
   testList.push_back(20);
   cout << "testList: " << testList << endl;
@@ -52,8 +57,20 @@ int main() {
   cout << "Push back 2" << endl;
   testList.push_back(2);
   cout << "testList: " << testList << endl;
+  cout << endl;
+
+  cout << "Pop Back tests:" << endl;
+  cout << "Pop Back 2" << endl;
+  testList.pop_back();
+  cout << "testList: " << testList << endl;
+  cout << "Pop Back 3" << endl;
+  testList.pop_back();
+  cout << "testList: " << testList << endl;
+  cout << "Pop Back 20" << endl;
+  testList.pop_back();
+  cout << "testList: " << testList << endl;
 
 
 
-    return 0;
+  return 0;
 }
