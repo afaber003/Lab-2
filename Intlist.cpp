@@ -71,6 +71,7 @@ void IntList::pop_back()
 
 ostream & operator<<(ostream &out, const IntList &rhs)
 {
+  if (rhs.empty()) return out;
   if (rhs.head != nullptr)
   {
     IntNode *tempNode = rhs.head;
