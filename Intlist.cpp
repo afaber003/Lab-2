@@ -19,14 +19,25 @@ void IntList::push_front(int value){
     dummyHead->next = newone;
     newone->prev = dummyHead;
     newone->next->prev = newone;
+
+    if (!empty()){
+      head = dummyHead->next;
+      tail = dummyTail->prev;
+  }
 }
 
-void IntList::pop_front() //please check if I deleted properly
+void IntList::pop_front()
 {
+  if (empty()) return;
   IntNode* oldHead = dummyHead->next;
   dummyHead->next = oldHead->next;
   oldHead->next->prev = dummyHead;
   delete oldHead;
+
+  if (!empty()){
+      head = dummyHead->next;
+      tail = dummyTail->prev;
+  }
 
 }
 
@@ -37,15 +48,25 @@ void IntList::push_back(int value)
   dummyTail->prev = newone;
   newone->prev->next = newone;
   newone->next = dummyTail;
-
+  
+  if (!empty()){
+      head = dummyHead->next;
+      tail = dummyTail->prev;
+  }
 }
 
-void IntList::pop_back() //please check if I deleted properly
+void IntList::pop_back()
 {
+  if (empty()) return;
   IntNode* oldTail = dummyTail->prev;
   dummyTail->prev = oldTail->prev;
   oldTail->prev->next = dummyTail;
   delete oldTail;
+
+  if (!empty()){
+      head = dummyHead->next;
+      tail = dummyTail->prev;
+  }
 }
 
 ostream & operator<<(ostream &out, const IntList &rhs)
@@ -73,4 +94,19 @@ ostream & operator<<(ostream &out, const IntList &rhs)
 
 
   return out;
+}
+
+bool IntList::empty() const {
+    if (dummyHead->next == dummyTail) return true;
+    else return false;
+}
+
+void IntList::printReverse() const {
+    if (empty()) return;
+    IntNode* currnode = tail;
+    while (currnode->prev != dummyHead){
+        cout << currnode->data << ' ';
+        currnode = currnode->prev;
+    }
+    cout << currnode;
 }

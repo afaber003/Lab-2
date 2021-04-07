@@ -40,8 +40,6 @@ class IntList {
         IntNode* dummyTail;
         IntNode* head;
         IntNode* tail;
-        int size = 0; //added for extra help. I'm sure it will come in handy
-
 };
 
 #endif
