@@ -69,6 +69,60 @@ int main() {
   cout << "Pop Back 20" << endl;
   testList.pop_back();
   cout << "testList: " << testList << endl;
+  cout << endl;
+
+  cout << "Is testList empty: " << endl;
+  cout << testList.empty() << endl;
+  cout << endl;
+
+  cout << "Pop front 7" << endl;
+  testList.pop_front();
+  cout << "testList: " << testList << endl;
+  cout << "Pop Back 5" << endl; 
+  //free(): double free deteced in tcache 2. Aborted (core dumped)
+  testList.pop_back();
+  cout << "testList: " << testList << endl;
+  cout << endl;
+
+  cout << "Is testList empty: " << endl;
+  cout << testList.empty() << endl;
+  cout << endl;
+
+  cout << "Conducting tests for testList2" << endl;
+  IntList testList2;
+  cout << "Is testList2 empty: " << endl;
+  cout << testList.empty() << endl;
+  cout << endl;
+
+  cout << "Push back 20" << endl;
+  testList.push_back(20);
+  cout << "testList2: " << testList << endl;
+  cout << "Push front 7" << endl;
+  testList.push_front(7);
+  cout << "testList2: " << testList << endl;
+  cout << "Push back 10" << endl;
+  testList.push_back(10);
+  cout << "testList2: " << testList << endl;
+  cout << "Push front 6" << endl;
+  testList.push_front(6);
+  cout << "testList2: " << testList << endl;
+  cout << "Push back 11" << endl;
+  testList.push_back(11);
+  cout << "testList2: " << testList << endl;
+  cout << "Push front 1" << endl;
+  testList.push_front(1);
+  cout << "testList2: " << testList << endl;
+  cout << endl;
+
+  cout << "testList2 in Reverse: " << endl;
+  testList.printReverse();
+  cout << endl;
+
+
+
+
+
+  
 
 
 
