@@ -34,6 +34,7 @@ void IntList::pop_front()
   head->next->prev = dummyHead;
   delete oldHead;
 
+  head = dummyHead->next;
   if (!empty()){
       head = dummyHead->next;
       tail = dummyTail->prev;
@@ -63,6 +64,7 @@ void IntList::pop_back()
   tail->prev->next = dummyTail;
   delete oldTail;
 
+  tail = dummyTail->prev;
   if (!empty()){
       head = dummyHead->next;
       tail = dummyTail->prev;
