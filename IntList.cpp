@@ -20,10 +20,8 @@ void IntList::push_front(int value){
     newone->prev = dummyHead;
     newone->next->prev = newone;
 
-    if (!empty()){
-      head = newone;
-      tail = dummyTail->prev;
-  }
+    head = newone;
+    tail = dummyTail->prev;
 }
 
 void IntList::pop_front()
@@ -50,21 +48,26 @@ void IntList::push_back(int value)
   newone->prev->next = newone;
   newone->next = dummyTail;
   
-  if (!empty()){
-      head = dummyHead->next;
-      tail = dummyTail->prev;
-  }
+  head = dummyHead->next;
+  tail = dummyTail->prev;
 }
 
 void IntList::pop_back()
 {
   if (empty()) return;
-  IntNode* oldTail = tail;
-  dummyTail->prev = tail->prev;
-  tail->prev->next = dummyTail;
-  delete oldTail;
+  else if (head == tail)
+  {
+    pop_front();
+  }
+  else
+  {
+    IntNode* oldTail = tail;
+    dummyTail->prev = tail->prev;
+    tail->prev->next = dummyTail;
+    delete oldTail;
 
-  tail = dummyTail->prev;
+    tail = dummyTail->prev;
+  }
   if (!empty()){
       head = dummyHead->next;
       tail = dummyTail->prev;

@@ -84,6 +84,7 @@ int main() {
   cout << "testList: " << testList << endl;
   cout << endl;
 
+  
   cout << "Is testList empty: " << endl;
   cout << testList.empty() << endl;
   cout << endl;
@@ -91,32 +92,45 @@ int main() {
   cout << "Conducting tests for testList2" << endl;
   IntList testList2;
   cout << "Is testList2 empty: " << endl;
-  cout << testList.empty() << endl;
+  cout << testList2.empty() << endl;
   cout << endl;
 
   cout << "Push back 20" << endl;
-  testList.push_back(20);
-  cout << "testList2: " << testList << endl;
+  testList2.push_back(20);
+  cout << "testList2: " << testList2 << endl;
   cout << "Push front 7" << endl;
-  testList.push_front(7);
-  cout << "testList2: " << testList << endl;
+  testList2.push_front(7);
+  cout << "testList2: " << testList2 << endl;
   cout << "Push back 10" << endl;
-  testList.push_back(10);
-  cout << "testList2: " << testList << endl;
+  testList2.push_back(10);
+  cout << "testList2: " << testList2 << endl;
   cout << "Push front 6" << endl;
-  testList.push_front(6);
-  cout << "testList2: " << testList << endl;
+  testList2.push_front(6);
+  cout << "testList2: " << testList2 << endl;
   cout << "Push back 11" << endl;
-  testList.push_back(11);
-  cout << "testList2: " << testList << endl;
+  testList2.push_back(11);
+  cout << "testList2: " << testList2 << endl;
   cout << "Push front 1" << endl;
-  testList.push_front(1);
-  cout << "testList2: " << testList << endl;
+  testList2.push_front(1);
+  cout << "testList2: " << testList2 << endl;
   cout << endl;
 
+  
   cout << "testList2 in Reverse: " << endl;
-  testList.printReverse();
+  testList2.printReverse();
   cout << endl;
+
+  IntList testList3;
+  cout << "Conducting tests for testList3:" << endl;
+  cout << "Push back 1" << endl;
+  testList3.push_back(1);
+  cout << "testList3: " << testList3 << endl;
+  cout << "Pop Back 1" << endl; 
+  testList3.pop_back();
+  cout << "testList3: " << testList3 << endl;
+  cout << endl;
+  
+
 
 
 
