@@ -126,11 +126,17 @@ int main() {
 
   IntList testList3;
   cout << "Conducting tests for testList3:" << endl;
-  cout << "Push back 1" << endl;
-  testList3.push_back(1);
+  cout << "Push back 9" << endl;
+  testList3.push_back(9);
   cout << "testList3: " << testList3 << endl;
-  cout << "Pop Back 1" << endl; 
+  cout << "Pop Back 9" << endl; 
   testList3.pop_back();
+  cout << "testList3: " << testList3 << endl;
+  cout << "Push Front 3" << endl; 
+  testList3.push_front(3);
+  cout << "testList3: " << testList3 << endl;
+  cout << "Pop front 3" << endl;
+  testList3.pop_front();
   cout << "testList3: " << testList3 << endl;
   cout << "Is testList3 empty: " << endl;
   cout << testList3.empty() << endl;
