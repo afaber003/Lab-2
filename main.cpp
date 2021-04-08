@@ -128,6 +128,8 @@ int main() {
   cout << "Pop Back 1" << endl; 
   testList3.pop_back();
   cout << "testList3: " << testList3 << endl;
+  cout << "Is testList3 empty: " << endl;
+  cout << testList3.empty() << endl;
   cout << endl;
   
 
