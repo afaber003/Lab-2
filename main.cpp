@@ -1,3 +1,7 @@
+/*
+    Made by Andrew Faber and Benjamin Bravo
+*/
+
 #include <iostream>
 #include <string>
 #include "IntList.h"
